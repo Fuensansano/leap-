@@ -27,4 +27,9 @@ public class LeapYearTest {
     assertFalse(LeapYear.isLeapYear(100));
   }
 
+  @Test
+  public void year_two_hundred_is_not_a_leap_year() {
+    assertFalse(LeapYear.isLeapYear(200));
+  }
+
 }
