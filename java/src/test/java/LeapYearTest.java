@@ -49,4 +49,9 @@ public class LeapYearTest {
   public void year_divisible_by_eight_hundred_is_a_leap_year() {
     assertTrue(LeapYear.isLeapYear(800));
   }
+
+  @Test
+  public void year_divisible_by_1200_is_a_leap_year() {
+    assertTrue(LeapYear.isLeapYear(1200));
+  }
 }
