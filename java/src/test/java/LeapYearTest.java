@@ -40,18 +40,15 @@ public class LeapYearTest {
     assertFalse(LeapYear.isLeapYear(year));
   }
 
-  @Test
-  public void year_divisible_by_four_hundred_is_a_leap_year() {
-    assertTrue(LeapYear.isLeapYear(400));
+  @ParameterizedTest
+  @CsvSource({
+    "400",
+    "800",
+    "1200",
+    "1600"
+  })
+  public void year_divisible_by_400_and_100_are_leap_year(int year) {
+    assertTrue(LeapYear.isLeapYear(year));
   }
 
-  @Test
-  public void year_divisible_by_eight_hundred_is_a_leap_year() {
-    assertTrue(LeapYear.isLeapYear(800));
-  }
-
-  @Test
-  public void year_divisible_by_1200_is_a_leap_year() {
-    assertTrue(LeapYear.isLeapYear(1200));
-  }
 }
