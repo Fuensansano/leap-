@@ -32,4 +32,8 @@ public class LeapYearTest {
     assertFalse(LeapYear.isLeapYear(200));
   }
 
+  @Test
+  public void year_three_hundred_is_not_a_leap_year() {
+    assertFalse(LeapYear.isLeapYear(300));
+  }
 }
